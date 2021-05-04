@@ -50,7 +50,7 @@ jobs:
         composer remove vimeo/psalm --no-update --dev
         composer remove friendsofphp/php-cs-fixer --no-update --dev
         composer require "laravel/framework:${{ matrix.laravel }}" --no-update --no-progress --no-interaction
-        composer update --${{ matrix.dependency-version }} --prefer-dist --no-progress --no-interaction
+        composer update --${{ matrix.dependency-version }} --prefer-dist --no-progress --no-interaction -vvv
 
     - name: Execute Unit Tests
       run: composer test-ci
