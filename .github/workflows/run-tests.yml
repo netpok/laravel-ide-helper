@@ -47,7 +47,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        composer -V
         composer remove vimeo/psalm --no-update --dev
         composer remove friendsofphp/php-cs-fixer --no-update --dev
         composer require "laravel/framework:${{ matrix.laravel }}" --no-update --no-progress --no-interaction
