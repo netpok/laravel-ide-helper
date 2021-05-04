@@ -18,8 +18,8 @@ jobs:
 
       - name: Normalize composer.json
         run: |
-          composer global require ergebnis/composer-normalize
-          composer normalize
+          composer global require ergebnis/composer-normalize --no-interaction
+          composer normalize --no-interaction
 
       - uses: stefanzweifel/git-auto-commit-action@v4.0.0
         with:

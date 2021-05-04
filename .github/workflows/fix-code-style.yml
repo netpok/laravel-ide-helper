@@ -22,7 +22,7 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer update --prefer-dist --no-progress
+        run: composer update --prefer-dist --no-progress --no-interaction
 
       - run: composer fix-style
         continue-on-error: true

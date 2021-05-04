@@ -35,10 +35,10 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  composer create-project --prefer-dist laravel/lumen:${{ matrix.lumen }} --no-progress sample
+                  composer create-project --prefer-dist laravel/lumen:${{ matrix.lumen }} --no-progress --no-interaction sample
                   cd sample
-                  composer require "league/flysystem:^1" --no-update --no-progress
-                  composer update  --prefer-stable --prefer-dist --no-progress
+                  composer require "league/flysystem:^1" --no-update --no-progress --no-interaction
+                  composer update  --prefer-stable --prefer-dist --no-progress --no-interaction
 
             - name: Add package from source
               run: |
@@ -92,9 +92,9 @@ jobs:
 
             - name: Install dependencies
               run: |
-                  composer create-project --prefer-dist laravel/laravel:${{ matrix.laravel }} --no-progress sample
+                  composer create-project --prefer-dist laravel/laravel:${{ matrix.laravel }} --no-progress --no-interaction sample
                   cd sample
-                  composer update --prefer-stable --prefer-dist --no-progress
+                  composer update --prefer-stable --prefer-dist --no-progress --no-interaction
 
             - name: Add package from source
               run: |
